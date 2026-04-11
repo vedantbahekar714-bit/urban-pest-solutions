@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Urban Pest Solutions | Fast & Safe Pest Control in Surat</title>
+  <meta name="description" content="Expert pest control in Surat: termite, cockroach, rodent, bed bug & mosquito removal. Same-day service, child & pet safe. Call now for urgent help!">
+  <meta name="keywords" content="pest control in Surat, termite treatment Surat, cockroach control near me, rodent control Surat, bed bug removal, mosquito control Gujarat">
+  <!-- Font Awesome 6 (Free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #1e2a2f;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    /* container */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* sticky quick contact bar */
+    .sticky-contact-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #1e3a2f;
+      color: white;
+      padding: 10px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      font-size: 0.9rem;
+    }
+    .contact-left {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+    }
+    .contact-item a {
+      color: white;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .contact-item a:hover { color: #ffdd77; }
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+    .social-icons a {
+      color: white;
+      font-size: 1.2rem;
+      transition: 0.2s;
+    }
+    .social-icons a:hover { color: #25D366; }
+    .book-btn-small {
+      background: #f5b042;
+      color: #1e3a2f;
+      padding: 6px 16px;
+      border-radius: 40px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: 0.2s;
+    }
+    .book-btn-small:hover {
+      background: #ffce70;
+      transform: scale(0.97);
+    }
+
+    /* buttons & general */
+    .btn-primary {
+      background: #0f7b3a;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.2s;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .btn-primary:hover {
+      background: #0c622f;
+      transform: translateY(-2px);
+    }
+    .btn-whatsapp {
+      background: #25D366;
+      color: white;
+    }
+    .btn-outline-light {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+    .btn-outline-light:hover {
+      background: white;
+      color: #0f7b3a;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: #1e3a2f;
+    }
+    .section-sub {
+      text-align: center;
+      margin-bottom: 3rem;
+      color: #4a5b55;
+    }
+    .grid-3, .grid-4, .grid-2 {
+      display: grid;
+      gap: 2rem;
+    }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .grid-4 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+
+    .service-card, .why-card, .step-card, .testimonial-card, .blog-card {
+      background: #f9fafb;
+      border-radius: 24px;
+      padding: 1.8rem;
+      transition: all 0.25s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+      border: 1px solid #e9edec;
+    }
+    .service-card:hover, .why-card:hover { transform: translateY(-6px); box-shadow: 0 20px 25px -12px rgba(0,0,0,0.1); }
+    .service-icon { font-size: 2.5rem; color: #0f7b3a; margin-bottom: 1rem; }
+    h3 { margin-bottom: 0.75rem; font-weight: 700; }
+    .benefit-text { color: #2c4b3e; font-size: 0.95rem; margin-top: 0.5rem; }
+
+    .hero {
+      background: linear-gradient(115deg, #eef5f0 0%, #d9e8df 100%);
+      padding: 60px 0 70px;
+    }
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      max-width: 700px;
+    }
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: #1e3a2f;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #2d4a3e;
+    }
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin: 10px 0;
+    }
+    .badge-same-day {
+      background: #ffedd5;
+      color: #b45309;
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      width: fit-content;
+    }
+    /* before after */
+    .ba-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    .ba-img {
+      background: #d1d9d4;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      color: #2d4a3e;
+      background-size: cover;
+      background-position: center;
+    }
+    .real-photo-grid img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    }
+
+    /* sticky book now button (bottom-left) */
+    .sticky-book-now {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      background: #0f7b3a;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 60px;
+      font-weight: 800;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      z-index: 1100;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1rem;
+      transition: 0.2s;
+      border: none;
+    }
+    .sticky-book-now:hover {
+      background: #0c622f;
+      transform: scale(1.02);
+    }
+    /* floating whatsapp */
+    .float-wa {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background-color: #25D366;
+      color: white;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+      z-index: 1100;
+      transition: 0.2s;
+      text-decoration: none;
+    }
+    .float-wa:hover { transform: scale(1.08); background-color: #20b859; }
+
+    footer {
+      background: #0f2b22;
+      color: #cddfd8;
+      padding: 3rem 0 2rem;
+    }
+    .map-frame {
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid #ddd;
+    }
+    .faq-item {
+      margin-bottom: 1.2rem;
+      background: #f8faf8;
+      padding: 1rem 1.5rem;
+      border-radius: 20px;
+    }
+    .faq-question {
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+    }
+    .faq-answer { margin-top: 0.6rem; color: #3a554b; display: none; }
+    .faq-item.open .faq-answer { display: block; }
+
+    @media (max-width: 780px) {
+      .sticky-contact-bar { flex-direction: column; align-items: stretch; text-align: center; }
+      .contact-left { justify-content: center; }
+      .hero h1 { font-size: 2.2rem; }
+      .section-title { font-size: 1.8rem; }
+      .container { padding: 0 20px; }
+      .sticky-book-now { padding: 8px 18px; font-size: 0.9rem; bottom: 16px; left: 16px; }
+      .float-wa { width: 50px; height: 50px; font-size: 1.8rem; bottom: 16px; right: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Sticky Quick Contact Bar -->
+<div class="sticky-contact-bar">
+  <div class="contact-left">
+    <div class="contact-item"><i class="fas fa-phone-alt"></i> <a href="tel:9822030427">9822030427</a></div>
+    <div class="contact-item"><i class="fab fa-whatsapp"></i> <a href="https://wa.me/919822030427?text=Hello%20Urban%20Pest%20Solutions%2C%20I%20need%20pest%20control%20service%20in%20Surat.%20Please%20share%20details." target="_blank">WhatsApp</a></div>
+    <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Surat, Gujarat</div>
+    <div class="social-icons">
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+  <a href="#book-now-section" class="book-btn-small"><i class="fas fa-calendar-check"></i> Book Now</a>
+</div>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <span class="badge-same-day"><i class="fas fa-clock"></i> Same-Day Service Available in Surat</span>
+      <h1>Fast, Safe Pest Removal <br> for Surat Homes & Businesses</h1>
+      <p>Eco-friendly, effective treatments against termites, cockroaches, rodents, bed bugs & mosquitoes. Certified experts — safe for kids & pets.</p>
+      <div class="cta-group">
+        <a href="#book-now-section" class="btn-primary"><i class="fas fa-calendar-alt"></i> Book Now</a>
+        <a href="tel:9822030427" class="btn-primary btn-outline-light" style="background: transparent; border:2px solid #1e3a2f; color:#1e3a2f;"><i class="fas fa-phone"></i> Call Now</a>
+        <a href="https://wa.me/919822030427?text=Hello%20Urban%20Pest%20Solutions%2C%20I%20need%20pest%20control%20service%20in%20Surat.%20Please%20share%20details." target="_blank" class="btn-primary btn-whatsapp" style="background:#25D366;"><i class="fab fa-whatsapp"></i> WhatsApp Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<div class="container" style="margin-top: 4rem; margin-bottom: 4rem;">
+  <h2 class="section-title">Expert Pest Control Services in Surat</h2>
+  <div class="grid-3">
+    <div class="service-card"><i class="fas fa-bug service-icon"></i><h3>Termite Control</h3><p>Eliminate termites at the source with advanced liquid barriers & bait systems. Long-term protection for your property.</p><div class="benefit-text"><i class="fas fa-check-circle"></i> Safe, odourless & warranty-backed</div></div>
+    <div class="service-card"><i class="fas fa-cockroach service-icon"></i><h3>Cockroach Control</h3><p>Target gel & eco sprays to wipe out infestations fast. Break the breeding cycle and keep kitchens hygienic.</p><div class="benefit-text"><i class="fas fa-shield-alt"></i> Child/pet safe after drying</div></div>
+    <div class="service-card"><i class="fas fa-rat service-icon"></i><h3>Rodent Control</h3><p>Humane trapping & sealing of entry points. Prevent disease & structural damage with proven techniques.</p><div class="benefit-text"><i class="fas fa-home"></i> 6-month rodent proofing guarantee</div></div>
+    <div class="service-card"><i class="fas fa-bed service-icon"></i><h3>Bed Bug Treatment</h3><p>Heat treatment & steam technology that eradicates all stages. Non-toxic, one-time solution.</p><div class="benefit-text"><i class="fas fa-temperature-high"></i> 100% kill rate guarantee</div></div>
+    <div class="service-card"><i class="fas fa-mosquito service-icon"></i><h3>Mosquito Control</h3><p>Anti-larval measures & fogging to reduce dengue, malaria risk. Enjoy outdoor spaces again.</p><div class="benefit-text"><i class="fas fa-leaf"></i> Natural options available</div></div>
+  </div>
+</div>
+
+<!-- BEFORE & AFTER RESULTS -->
+<div class="container" style="margin-bottom: 4rem;">
+  <h2 class="section-title">Real Results – Before & After</h2>
+  <div class="grid-2">
+    <div class="ba-card"><div class="ba-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://picsum.photos/id/20/400/250'); background-size:cover;"><span style="background:#00000099; padding:4px 12px; border-radius:30px; color:white;">🔴 BEFORE: Termite damage</span></div><div class="ba-img" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://picsum.photos/id/104/400/250'); background-size:cover;"><span style="background:#0f7b3acc; padding:4px 12px; border-radius:30px; color:white;">✅ AFTER: Restored & protected</span></div><div class="ba-card" style="padding:1rem;"><p><strong>Termite infested furniture</strong> → Full recovery & anti-termite coating applied. Surat home, safe again.</p></div></div>
+    <div class="ba-card"><div class="ba-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://picsum.photos/id/18/400/250'); background-size:cover;"><span style="background:#00000099; padding:4px 12px; border-radius:30px; color:white;">🐜 Cockroach infestation</span></div><div class="ba-img" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://picsum.photos/id/26/400/250'); background-size:cover;"><span style="background:#0f7b3acc; padding:4px 12px; border-radius:30px; color:white;">✨ Spotless kitchen</span></div><div class="ba-card" style="padding:1rem;"><p><strong>Cockroach hotspots eliminated</strong> → German roaches gone in 2 visits with gel & sanitation advice.</p></div></div>
+  </div>
+</div>
+
+<!-- WHY CHOOSE US -->
+<div class="container" style="margin-bottom: 4rem;">
+  <h2 class="section-title">Why Surat Trusts Urban Pest Solutions</h2>
+  <div class="grid-4">
+    <div class="why-card"><i class="fas fa-user-graduate fa-2x" style="color:#0f7b3a;"></i><h3>Certified Experts</h3><p>Trained, licensed & background-checked technicians.</p></div>
+    <div class="why-card"><i class="fas fa-flask fa-2x" style="color:#0f7b3a;"></i><h3>Govt-approved Chemicals</h3><p>Low-odour, eco-friendly & highly effective.</p></div>
+    <div class="why-card"><i class="fas fa-child fa-2x" style="color:#0f7b3a;"></i><h3>Safe for Kids & Pets</h3><p>Stringent safety protocols, pet-friendly options.</p></div>
+    <div class="why-card"><i class="fas fa-bolt fa-2x" style="color:#0f7b3a;"></i><h3>Same-Day Response</h3><p>Emergency service across Surat within 4 hours.</p></div>
+    <div class="why-card"><i class="fas fa-smile fa-2x" style="color:#0f7b3a;"></i><h3>100+ Happy Customers</h3><p>Rave reviews from homeowners & businesses.</p></div>
+    <div class="why-card"><i class="fas fa-star fa-2x" style="color:#0f7b3a;"></i><h3>5-Star Rated</h3><p>Google rated 4.9 ★ from verified clients.</p></div>
+    <div class="why-card"><i class="fas fa-shield-alt fa-2x" style="color:#0f7b3a;"></i><h3>Service Guarantee</h3><p>30-day warranty, free re-treatment if needed.</p></div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="container" style="margin-bottom: 4rem;">
+  <h2 class="section-title">Simple 4‑Step Process</h2>
+  <div class="grid-4">
+    <div class="step-card"><i class="fas fa-search fa-2x" style="color:#0f7b3a;"></i><h3>1. Inspection</h3><p>Thorough assessment & pest identification.</p></div>
+    <div class="step-card"><i class="fas fa-spray-can-sparkles fa-2x" style="color:#0f7b3a;"></i><h3>2. Treatment</h3><p>Customised plan using safe, advanced methods.</p></div>
+    <div class="step-card"><i class="fas fa-door-closed fa-2x" style="color:#0f7b3a;"></i><h3>3. Prevention</h3><p>Seal cracks, apply residual barrier.</p></div>
+    <div class="step-card"><i class="fas fa-calendar-week fa-2x" style="color:#0f7b3a;"></i><h3>4. Follow-up</h3><p>Post-treatment check & free support.</p></div>
+  </div>
+</div>
+
+<!-- REAL PHOTOS SECTION -->
+<div class="container" style="margin-bottom: 4rem;">
+  <h2 class="section-title">Our Real Team at Work</h2>
+  <p class="section-sub">Authentic images from our Surat pest control operations – no stock photos, just real service proof.</p>
+  <div class="grid-3 real-photo-grid">
+    <div><img src="https://picsum.photos/id/128/400/300" alt="Urban Pest team in Adajan"><p><i class="fas fa-hard-hat"></i> Termite treatment in Vesu</p></div>
+    <div><img src="https://picsum.photos/id/169/400/300" alt="Cockroach gel application"><p><i class="fas fa-hand-sparkles"></i> Cockroach control, Varachha</p></div>
+    <div><img src="https://picsum.photos/id/20/400/300" alt="Bed bug heat treatment"><p><i class="fas fa-fire-extinguisher"></i> Bed bug heat chamber setup</p></div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="container" style="margin-bottom: 4rem;">
+  <h2 class="section-title">What Our Surat Customers Say</h2>
+  <div class="grid-3">
+    <div class="testimonial-card"><i class="fas fa-quote-left fa-2x" style="color:#b9cfc4;"></i><p>"Urban Pest Solutions solved our severe termite issue within 2 days. Professional team and safe for my toddler. Highly recommended!"</p><h4>— Ramesh Patel, Vesu</h4><div><i class="fas fa-star" style="color:#f5b042;"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
+    <div class="testimonial-card"><i class="fas fa-quote-left fa-2x" style="color:#b9cfc4;"></i><p>"We run a small café in Adajan and had cockroaches. Quick response, odourless treatment and no more complaints. Thank you!"</p><h4>— Neha Shah, Adajan</h4><div><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
+    <div class="testimonial-card"><i class="fas fa-quote-left fa-2x" style="color:#b9cfc4;"></i><p>"Mosquitoes were ruining evenings. After fogging & larvicide, our garden is peaceful. Same-day booking and very polite staff."</p><h4>— Kiran Desai, Katargam</h4><div><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
+  </div>
+</div>
+
+<!-- SERVICE GUARANTEE SECTION -->
+<div class="container" style="margin-bottom: 4rem; background: #eef5f0; border-radius: 40px; padding: 2rem; text-align: center;">
+  <i class="fas fa-certificate fa-3x" style="color:#0f7b3a;"></i>
+  <h2 style="margin: 0.5rem 0;">30-Day Service Guarantee</h2>
+  <p style="font-size:1.1rem; max-width:700px; margin:0 auto;">If any targeted pest returns within 30 days after treatment, we’ll re-treat at <strong>no extra cost</strong>. Your peace of mind is our priority.</p>
+</div>
+
+<!-- GOOGLE MAP SECTION -->
+<div class="container" style="margin-bottom: 4rem;">
+  <h2 class="section-title">We Serve All Surat & Surroundings</h2>
+  <div class="map-frame">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119183.69076880562!2d72.779332924435!3d21.19503038739066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f2cfb071a13%3A0x78f0bf8f0c7e3d13!2sSurat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1712345678901!5m2!1sen!2sin" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <p style="text-align:center; margin-top:1rem;"><i class="fas fa-location-dot"></i> Serving Adajan, Vesu, Katargam, Varachha, and all areas in Surat city.</p>
+</div>
+
+<!-- AREA COVERAGE -->
+<div class="container" style="margin-bottom: 2rem; text-align:center;">
+  <h2 class="section-title">Local Coverage for Fast Action</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;">
+    <span class="badge-same-day" style="background:#e2f0ea;">Adajan</span>
+    <span class="badge-same-day" style="background:#e2f0ea;">Vesu</span>
+    <span class="badge-same-day" style="background:#e2f0ea;">Katargam</span>
+    <span class="badge-same-day" style="background:#e2f0ea;">Varachha</span>
+    <span class="badge-same-day" style="background:#e2f0ea;">City Light</span>
+    <span class="badge-same-day" style="background:#e2f0ea;">Piplod</span>
+    <span class="badge-same-day" style="background:#e2f0ea;">Dumas Road</span>
+    <span class="badge-same-day" style="background:#e2f0ea;">Althan</span>
+  </div>
+</div>
+
+<!-- EDUCATIONAL / BLOG SECTION -->
+<div class="container" style="margin-bottom: 4rem;">
+  <h2 class="section-title">Pest Insights & Tips</h2>
+  <div class="grid-3">
+    <div class="blog-card"><i class="fas fa-home-damage"></i><h3>Signs of Termite Damage</h3><p>Mud tubes, hollow-sounding wood, discarded wings. Early detection saves thousands. Call for free inspection in Surat.</p><a href="#" style="color:#0f7b3a; font-weight:600;">Read more →</a></div>
+    <div class="blog-card"><i class="fas fa-shield-virus"></i><h3>Why Regular Pest Control Matters</h3><p>Protect health, property value and peace of mind. Especially crucial in humid Surat climate.</p><a href="#" style="color:#0f7b3a; font-weight:600;">Read more →</a></div>
+    <div class="blog-card"><i class="fas fa-temperature-high"></i><h3>Common Pests in Surat Homes</h3><p>Cockroaches thrive in warm kitchens, mosquitoes after monsoon. Our seasonal plans target them effectively.</p><a href="#" style="color:#0f7b3a; font-weight:600;">Read more →</a></div>
+  </div>
+</div>
+
+<!-- FAQ SECTION -->
+<div class="container" style="margin-bottom: 4rem;">
+  <h2 class="section-title">Frequently Asked Questions</h2>
+  <div id="faqContainer">
+    <div class="faq-item"><div class="faq-question">Is it safe for kids and pets? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Yes, we use government-approved, low-toxicity products. Our technicians ensure all surfaces are dry and safe before you re-enter, and we recommend keeping pets away for 2-3 hours.</div></div>
+    <div class="faq-item"><div class="faq-question">How long does treatment last? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Depending on pest type, treatments last 3-12 months. Termite barriers offer up to 5 years with annual check-ups. We provide warranty terms.</div></div>
+    <div class="faq-item"><div class="faq-question">Do I need to leave home during treatment? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">For most general pest sprays, you may stay but we recommend stepping out for 1-2 hours. For bed bug heat treatment or fumigation, we advise temporary absence.</div></div>
+    <div class="faq-item"><div class="faq-question">How fast does it work? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Initial results within 24 hours for cockroaches/ants, termite colonies stop feeding within days. Complete elimination in 7-10 days.</div></div>
+    <div class="faq-item"><div class="faq-question">How to book service? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Call 9822030427, WhatsApp us, or click "Book Now" button. We’ll confirm same-day or next-day slot.</div></div>
+  </div>
+</div>
+
+<!-- STRONG CTA SECTION -->
+<div class="container" style="margin-bottom: 3rem; background: #1e3a2f; border-radius: 48px; padding: 3rem 2rem; text-align: center; color:white;">
+  <h2 style="font-size: 2rem;">Stop Pests Before They Take Over</h2>
+  <p style="margin: 1rem auto; max-width: 600px;">Get a free estimate & same-day service in Surat. Speak to an expert now.</p>
+  <div class="cta-group" style="justify-content: center;">
+    <a href="tel:9822030427" class="btn-primary" style="background:#f5b042; color:#1e3a2f;"><i class="fas fa-phone"></i> Call Now</a>
+    <a href="https://wa.me/919822030427?text=Hello%20Urban%20Pest%20Solutions%2C%20I%20need%20pest%20control%20service%20in%20Surat.%20Please%20share%20details." target="_blank" class="btn-primary btn-whatsapp" style="background:#25D366;"><i class="fab fa-whatsapp"></i> WhatsApp Now</a>
+    <a href="#book-now-section" class="btn-primary"><i class="fas fa-calendar-alt"></i> Book Online</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem;">
+      <div><h3 style="color:white;">Urban Pest Solutions</h3><p>Safe, fast, effective pest control in Surat, Gujarat.<br> <i class="fas fa-phone-alt"></i> <a href="tel:9822030427" style="color:#cddfd8;">9822030427</a><br><i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/919822030427" style="color:#cddfd8;">+91 9822030427</a><br><i class="fas fa-map-marker-alt"></i> Surat, Gujarat - 395003</p></div>
+      <div><h4 style="color:white;">Quick Links</h4><p><a href="#" style="color:#cddfd8;">Termite Control</a><br><a href="#" style="color:#cddfd8;">Cockroach Extermination</a><br><a href="#" style="color:#cddfd8;">Bed Bug Removal</a><br><a href="#" style="color:#cddfd8;">Mosquito Management</a></p></div>
+      <div><h4 style="color:white;">Follow Us</h4><div style="display:flex; gap:15px;"><a href="#" style="color:white; font-size:1.5rem;"><i class="fab fa-instagram"></i></a><a href="#" style="color:white; font-size:1.5rem;"><i class="fab fa-facebook"></i></a><a href="#" style="color:white; font-size:1.5rem;"><i class="fab fa-whatsapp"></i></a></div></div>
+    </div>
+    <hr style="margin: 2rem 0 1rem; border-color:#2e5544;"><p style="text-align:center; font-size:0.8rem;">© 2025 Urban Pest Solutions – Protecting Surat homes & businesses.</p>
+  </div>
+</footer>
+
+<!-- Sticky Book Now button (bottom-left) -->
+<a href="#book-now-section" class="sticky-book-now" id="stickyBookBtn"><i class="fas fa-calendar-check"></i> Book Now</a>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/919822030427?text=Hello%20Urban%20Pest%20Solutions%2C%20I%20need%20pest%20control%20service%20in%20Surat.%20Please%20share%20details." target="_blank" class="float-wa"><i class="fab fa-whatsapp"></i></a>
+
+<!-- Hidden anchor for book now -->
+<span id="book-now-section" style="position:relative; top:-80px; visibility:hidden;"></span>
+
+<script>
+  // FAQ toggle
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const questionDiv = item.querySelector('.faq-question');
+    questionDiv.addEventListener('click', () => {
+      item.classList.toggle('open');
+    });
+  });
+  // smooth scroll for book now
+  document.querySelectorAll('a[href^="#book-now-section"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e){
+      e.preventDefault();
+      document.getElementById('book-now-section').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+
+<!-- MARKETING EXTRAS (Taglines, WhatsApp message, Google Ads) -->
+<div class="container" style="margin: 2rem auto; background: #f3f9f5; border-radius: 28px; padding: 1.5rem;">
+  <h3 style="color:#1e3a2f;">📢 Marketing Boost Kit</h3>
+  <div><strong>✨ 5 Tagline Ideas:</strong><br> 1. “Surat’s Trusted Pest Shield – Fast & Safe.” <br> 2. “Zero Pests, Zero Worry – Same Day Service.” <br> 3. “Sleep Better, Live Cleaner – Urban Pest Solutions.” <br> 4. “No Termite, No Cockroach – Just Peace of Mind.” <br> 5. “Protect Your Home, Naturally Effective.”</div>
+  <div style="margin-top: 1rem;"><strong>💬 WhatsApp Pre-filled Message:</strong><br> “Hello Urban Pest Solutions, I need pest control service in Surat. Please share details.”</div>
+  <div style="margin-top: 1rem;"><strong>📢 Google Ads Headline Ideas:</strong><br> • Same-Day Pest Control Surat – Book Now <br> • Termite Treatment Surat – 30-Day Guarantee <br> • Cockroach Control Near Me – $0 Callout <br> • Safe Pest Removal for Kids & Pets – Call Today</div>
+</div>
+
+</body>
+</html>
